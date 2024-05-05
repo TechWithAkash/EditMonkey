@@ -1,54 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Monkey - Edit your images online</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffcfc;
+            color: #333;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #ff6f00, #ffcc80);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+    background: linear-gradient(to right, #ff6f00, #ffcc80);
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    top: 100px;
+    position: relative;
+}
+
+        .file-upload-wrapper {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 20px;
+        }
+
+        .card.teal {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card.teal:hover {
+            transform: scale(1.05);
+        }
+
+        .card.teal .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card.teal p {
+            font-size: 1rem;
+        }
+
+        .btn.teal {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn.teal:hover {
+            background-color: #ffcc80;
+        }
+        .btn,.card {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn:hover,.card:hover {
+            background-color: #ffcc80;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Pacifico', cursive; /* Changed font-family to Pacifico */
+            padding: 0px 50px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .logo {
+            display: flex; /* Display flex to align items horizontally */
+            align-items: center; /* Center align items vertically */
+        }
+
+        .logo img {
+            height: 300px; /* Adjust the height of the logo image */
+            margin-right: 10px; /* Add some space between the logo image and text */
+            margin-top: 10px;
+        }
+
+        .navbar {
+            position: relative; /* Set the navbar to relative positioning */
+        }
+
+        .logo {
+            position: absolute; /* Set the logo to absolute positioning */
+            left: 20px; /* Adjust the left distance as needed */
+            top: 50%; /* Center the logo vertically */
+            transform: translateY(-50%); /* Adjust vertical centering */
+        }
+        /* Custom toast classes */
+    .custom-toast {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+    }
+
+    .custom-toast.rounded {
+        border-radius: 25px; /* Rounded corners */
+    }
+    #download-button {
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem; 
+    text-align: center; 
+    width: 130px;
+    height: 55px;
+}
+
+
+#download-button:hover {
+    background-color: #ffcc80;
+}
+.submitbtn{
+    height: 100px;
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+
+}
+.submitbtn:hover{
+    background-color: #ffcc80;
+
+}
+
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/use">How to Use</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact Us</a>
-                    </li>
 
-                </ul>
-                <div class="d-flex">
-                    <button class="btn btn-outline-success mx-2" type="submit">Login
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- <div id="success-message" class="hide">Image converted successfully!</div> -->
 
-                    </button>
-                    <button class="btn btn-outline-success mx-2" type="submit">
-                        Signup
-                    </button>
+            <a href="/" class="logo">
+                <img src="/static/images/logo2.png" class="img" alt="Edit Monkey Logo">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/how">How to use</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
+                <li><a href="/signup" class="waves-effect waves-light btn">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/how">How to use</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Main content -->
+   
+
+    <!-- Middle section -->
+    <div class="container">
+       <h1>About Us</h1>
+       <p>
+     
+        
+        <h5>  Welcome to editMonkey!</h5>        
+        At editMonkey, we're passionate about transforming your images into visual masterpieces. Whether you're a professional photographer, a business owner, or an individual looking to enhance your personal photos, we're here to help you achieve your vision.
+        
+        Our team of experienced editors combines creativity with technical expertise to deliver stunning results. We understand that every image has a story to tell, and we're dedicated to bringing that story to life through our editing services.
+        
+        What sets us apart is our commitment to excellence and attention to detail. We take the time to understand your unique requirements and tailor our editing approach to suit your needs. Whether you need basic retouching, advanced color correction, or intricate photo manipulation, we've got you covered.
+        
+        But editMonkey is more than just a service—it's a community. We believe in fostering meaningful connections with our clients, building trust through transparent communication and exceptional results. When you choose editMonkey, you're not just hiring an editing service; you're joining a collaborative partnership dedicated to realizing your creative vision.
+        
+        So why wait? Let editMonkey unleash the full potential of your images and take your visual content to the next level. Join us on this exciting journey, and together, let's make every pixel count.
+        
+    
+        
+        <b>Feel free to adjust or expand upon this draft to better fit the tone and style of your website! </b>      </p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Edit Monkey</h5>
+                    <p class="grey-text text-lighten-4">Edit your images online with our powerful and user-friendly
+                        platform.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/about">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/how">How to use</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/contact">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </nav>
-    <h1>About page</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <div class="container center-align">
+            
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-3">© 2023 Edit Monkey. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 </body>
 
 </html>

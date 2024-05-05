@@ -131,18 +131,27 @@
 #download-button:hover {
     background-color: #ffcc80;
 }
-.submitbtn{
-    height: 100px;
+
+.convert-btn{
+    height: 50px;
+    width: 150px;
     background-color: #ff6f00;
     border-radius: 25px;
     transition: background-color 0.3s ease-in-out;
     color: #fff;
     display: block;
+    /* margin: 0 auto; */
+    font-size: 1rem; 
+    text-align: center;
 
+    border: 1px solid ;
 }
-.submitbtn:hover{
+.convert-btn:hover{
     background-color: #ffcc80;
 
+}
+#title{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
     </style>
@@ -165,7 +174,7 @@
                 <li><a href="/how">How to use</a></li>
                 <li><a href="/contact">Contact Us</a></li>
                 <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
-                <li><a href="/signup" class="waves-effect waves-light btn">Signup</a></li>
+                <li><a href="/login" class="waves-effect waves-light btn">LogOut</a></li>
             </ul>
         </div>
     </nav>
@@ -179,7 +188,7 @@
 
     <!-- Main content -->
     <div class="container">
-        <h3 class="center-align">Edit Monkey - Edit your images online</h3>
+        <h3 class="center-align" id="title">Edit Monkey - Edit your images online</h3>
         <div class="row">
             <form id="edit-form" enctype="multipart/form-data" class="col s12">
                 <div class="file-field input-field">
@@ -207,7 +216,7 @@
                     </select>
                     <label>Select an Editing Operation</label>
                 </div>
-                <button type="submit" id = "submitbtn" class="btn">Submit</button>
+                <button type="submit"  class="convert-btn">Convert</button>
             </form>
         </div>
     </div>
