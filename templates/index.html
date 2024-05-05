@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Monkey - Edit your images online</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fffcfc;
+            color: #333;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #ff6f00, #ffcc80);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background: linear-gradient(to right, #ff6f00, #ffcc80);
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .file-upload-wrapper {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 20px;
+        }
+
+        .card.teal {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card.teal:hover {
+            transform: scale(1.05);
+        }
+
+        .card.teal .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card.teal p {
+            font-size: 1rem;
+        }
+
+        .btn.teal {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn.teal:hover {
+            background-color: #ffcc80;
+        }
+        .btn,.card {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn:hover,.card:hover {
+            background-color: #ffcc80;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Pacifico', cursive; /* Changed font-family to Pacifico */
+            padding: 0px 50px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .logo {
+            display: flex; /* Display flex to align items horizontally */
+            align-items: center; /* Center align items vertically */
+        }
+
+        .logo img {
+            height: 300px; /* Adjust the height of the logo image */
+            margin-right: 10px; /* Add some space between the logo image and text */
+            margin-top: 10px;
+        }
+
+        .navbar {
+            position: relative; /* Set the navbar to relative positioning */
+        }
+
+        .logo {
+            position: absolute; /* Set the logo to absolute positioning */
+            left: 20px; /* Adjust the left distance as needed */
+            top: 50%; /* Center the logo vertically */
+            transform: translateY(-50%); /* Adjust vertical centering */
+        }
+        /* Custom toast classes */
+    .custom-toast {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+    }
+
+    .custom-toast.rounded {
+        border-radius: 25px; /* Rounded corners */
+    }
+    #download-button {
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem; 
+    text-align: center; 
+    width: 130px;
+    height: 55px;
+}
+
+
+#download-button:hover {
+    background-color: #ffcc80;
+}
+.submitbtn{
+    height: 100px;
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+
+}
+.submitbtn:hover{
+    background-color: #ffcc80;
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- <div id="success-message" class="hide">Image converted successfully!</div> -->
+
+            <a href="/" class="logo">
+                <img src="/static/images/logo2.png" class="img" alt="Edit Monkey Logo">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/how">How to use</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
+                <li><a href="/signup" class="waves-effect waves-light btn">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/how">How to use</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Main content -->
+    <div class="container">
+        <h3 class="center-align">Edit Monkey - Edit your images online</h3>
+        <div class="row">
+            <form id="edit-form" enctype="multipart/form-data" class="col s12">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Select an Image</span>
+                        <input type="file" name="file" id="file-upload">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Select an image to edit">
+                    </div>
+                </div>
+                <!-- Display uploaded image -->
+                <div class="file-upload-wrapper hide" id="converted-image-container">
+                    <img src="#" alt="Converted Image" class="uploaded-image" id="converted-image">
+                    <a id="download-button" class="waves-effect waves-light btn" download>Download</a>
+                </div>
+                <div class="input-field col s12">
+                    <select name="operation">
+                        <option value="" disabled selected>Choose an Operation</option>
+                        <option value="cjpeg">Convert to JPEG</option>
+                        <option value="cpng">Convert to PNG</option>
+                        <option value="cgray">Convert to Grayscale</option>
+                        <option value="cwebp">Convert to Webp</option>
+                        <option value="cjpg">Convert to Jpg</option>
+                    </select>
+                    <label>Select an Editing Operation</label>
+                </div>
+                <button type="submit" id = "submitbtn" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Middle section -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-content white-text">
+                        <span class="card-title">Easy to Use</span>
+                        <p>Our simple and intuitive interface makes image editing a breeze for everyone.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-content white-text">
+                        <span class="card-title">Powerful Tools</span>
+                        <p>We offer a wide range of powerful editing tools to cater to all your image editing needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-content white-text">
+                        <span class="card-title">Free to Use</span>
+                        <p>Our platform is completely free to use, without any hidden costs or limitations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Edit Monkey</h5>
+                    <p class="grey-text text-lighten-4">Edit your images online with our powerful and user-friendly
+                        platform.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/about">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/how">How to use</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container center-align">
+            
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-3">© 2023 Edit Monkey. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elemsSidenav = document.querySelectorAll(".sidenav");
+            var instancesSidenav = M.Sidenav.init(elemsSidenav);
+            var elemsSelect = document.querySelectorAll("select");
+            var instancesSelect = M.FormSelect.init(elemsSelect);
+
+            document.getElementById('edit-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                fetch('/edit', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+    if (data.success) {
+        document.getElementById('converted-image').src = data.converted_url;
+        document.getElementById('download-button').setAttribute('href', data.converted_url);
+        document.getElementById('converted-image-container').classList.remove('hide');
+        // Display success message using Materialize toast
+        M.toast({html: 'Image converted successfully!', classes: 'custom-toast rounded'});
+    } else {
+        console.error(data.error);
+    }
+})
+
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+
+            // Show uploaded image
+            document.getElementById('file-upload').addEventListener('change', function () {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('uploaded-image').setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
+        });
+    </script>
+</body>
+
+</html>

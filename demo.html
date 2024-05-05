@@ -1,0 +1,410 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Edit Monkey-Edit Your Image Online</title>
+  <style>
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Gradient Background */
+.container {
+  background: linear-gradient(45deg, #0077b6, #48cae4);
+  color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+.navbar {
+  background: linear-gradient(45deg, #0077b6, #48cae4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f7f7f7;
+}
+
+.btn-outline-success {
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #fff;
+  color: #0077b6;
+}
+
+/* Main Content */
+.fs-2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.form-select {
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #0077b6;
+  border-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0077b6;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Edit Monkey</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/use">How to Use</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn btn-outline-success mx-2" type="submit">Login</button>
+          <button class="btn btn-outline-success mx-2" type="submit">Signup</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <form action="/edit" method="post" enctype="multipart/form-data">
+      <h1 class="fs-2 text">Edit Monkey - Edit Your Image Online</h1>
+      <p class="fs-5">Edit Monkey is an online image editing tool that allows you to edit your image online. You can use this tool to edit your image online. You can use this tool to edit your image online. You can use this tool to edit your image online. You can use this tool to edit your image online. You can use this tool to edit your image online. You can use this tool to</p>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Select an Image</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+        <option selected>Open to Select</option>
+        <option value="1">Convert to webp</option>
+        <option value="2">Convert to png</option>
+        <option value="3">Convert to gif</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Edit Monkey. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Conversion App</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom styles here */
+    body {
+      background-color: #f5f5f5;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .btn {
+      text-transform: none;
+    }
+    .gradient-bg {
+    background: linear-gradient(to bottom, #4a148c, #7b1fa2);
+    top: -16px;
+    position: relative;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav-extended indigo darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Edit Monkey</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/about">About</a></li>
+        <li><a href="#converter">Converter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidenav -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="/about">About</a></li>
+    <li><a href="#converter">Converter</a></li>
+  </ul>
+
+  <!-- About Section -->
+<div id="about" class="section scrollspy">
+  <div class="gradient-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h2 class="white-text">Edit Monkey - Edit Your Image Online</h2>
+          <p class="flow-text white-text">Welcome to our Image Conversion App! This powerful tool allows you to convert your images to various formats, including JPG, PNG, WebP, and GIF. Our user-friendly interface and responsive design ensure a seamless experience on any device.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card-panel teal lighten-4">
+            <span class="teal-text text-darken-4">
+              <i class="material-icons">edit</i>
+            </span>
+            <span class="flow-text">Easy Editing</span>
+            <p>Quickly edit your images with our intuitive tools. Crop, resize, add filters, and more!</p>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card-panel teal lighten-4">
+            <span class="teal-text text-darken-4">
+              <i class="material-icons">cloud_download</i>
+            </span>
+            <span class="flow-text">Instant Conversion</span>
+            <p>Convert your images to various formats instantly. No waiting, just click and download!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Converter Section -->
+  <div id="converter" class="section scrollspy">
+    <div class="container">
+      <h4 class="center-align">Image Converter</h4>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Upload Image</span>
+              <div class="file-field input-field">
+                <div class="btn indigo darken-4">
+                  <span>File</span>
+                  <input type="file" name="file" id="imageInput" accept="image/*">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Choose Format</span>
+              <div class="input-field">
+                <select id="formatSelect" name="operation" >
+                  <option value="" disabled selected>Choose format</option>
+                  <option value="jpg">JPG</option>
+                  <option value="png">PNG</option>
+                  <option value="webp">WebP</option>
+                  <option value="gif">GIF</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img  id="originalImage" class="responsive-img" alt="Original Image">
+              <span class="card-title">Original Image</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card" id="convertedCard" style="display: none;">
+            <div class="card-image">
+              <img id="convertedImage" class="responsive-img" alt="Converted Image">
+              <span class="card-title">Converted Image</span>
+            </div>
+            <div class="card-action">
+              <a href="#" id="downloadButton" class="waves-effect waves-light btn indigo darken-4" download="">Download Converted Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <button type="submit" class="waves-effect waves-light btn-large indigo darken-4" id="convertButton"><a class="waves-effect waves-light btn-large indigo darken-4" id="convertButton">Convert</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer indigo darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Edit Monkey</h5>
+          <p class="grey-text text-lighten-4">Convert your images to different formats with ease.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#about">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="#converter">Converter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright indigo darken-3">
+      <div class="container">
+        © 2023 Image Conversion App. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Your JavaScript code -->
+  <script>
+    // Materialize initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+      var selectElems = document.querySelectorAll('select');
+      var selectInstances = M.FormSelect.init(selectElems);
+
+      // Get the file input, original image, converted image, and convert button elements
+      var fileInput = document.getElementById('imageInput');
+      var originalImage = document.getElementById('originalImage');
+      var convertedImage = document.getElementById('convertedImage');
+      var convertedCard = document.getElementById('convertedCard');
+      var convertButton = document.getElementById('convertButton');
+      var downloadButton = document.getElementById('downloadButton');
+
+      // Add event listener to the file input
+      fileInput.addEventListener('change', function() {
+        // Get the selected file
+        var file = this.files[0];
+
+        // Check if a file is selected
+        if (file) {
+          // Create a FileReader object
+          var reader = new FileReader();
+
+          // Add event listener for when the file is loaded
+          reader.addEventListener('load', function() {
+            // Set the src attribute of the original image with the file data
+            originalImage.src = reader.result;
+          });
+
+          // Read the file as a data URL
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Add event listener to the convert button
+      convertButton.addEventListener('click', function() {
+        // Get the selected format from the dropdown
+        var selectedFormat = document.getElementById('formatSelect').value;
+
+        // Check if a format is selected and an image is loaded
+        if (selectedFormat && originalImage.src) {
+          // Call the image conversion function here
+          // You'll need to implement the actual conversion logic
+          // and set the result to the convertedImage.src
+          convertImage(originalImage.src, selectedFormat, function(result) {
+            convertedImage.src = result;
+            convertedCard.style.display = 'block'; // Show the converted card
+            downloadButton.setAttribute('href', result); // Set the download link
+          });
+        } else {
+          alert('Please select an image and a format to convert.');
+        }
+      });
+    });
+
+    // Scrollspy initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.scrollspy');
+      var instances = M.ScrollSpy.init(elems, {
+        scrollOffset: 50
+      });
+    });
+
+    // Image conversion function (placeholder)
+    function convertImage(imageData, format, callback) {
+      // You'll need to implement the actual conversion logic here
+      // For example, you can use canvas or third-party libraries like browser-image-converter
+      // This is just a placeholder function that simulates the conversion
+      setTimeout(function() {
+        callback(imageData); // Replace with the converted image data
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background-color: #fffcfc;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 100px auto; /* Center the card */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out; /* Added hover effect */
+        }
+
+        .form-container:hover {
+            transform: scale(1.02); /* Scale up on hover */
+        }
+
+        .form-container h4 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff6f00;
+        }
+
+        .input-field input[type="text"],
+        .input-field input[type="password"] {
+            border-bottom: 1px solid #ff6f00;
+            box-shadow: none;
+        }
+
+        .input-field input[type="text"]:focus,
+        .input-field input[type="password"]:focus {
+            border-bottom: 1px solid #ffcc80;
+        }
+
+        .btn {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #ffcc80;
+        }
+
+        .btn-login {
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Signup Form -->
+        <div class="form-container">
+            <h4>Sign Up</h4>
+            <form>
+                <div class="input-field">
+                    <input id="signup-username" type="text">
+                    <label for="signup-username">Username</label>
+                </div>
+                <div class="input-field">
+                    <input id="signup-email" type="text">
+                    <label for="signup-email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input id="signup-password" type="password">
+                    <label for="signup-password">Password</label>
+                </div>
+                <div class="input-field">
+                    <input id="signup-confirm-password" type="password">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
+            </form>
+            <p class="center-align"><a class="btn-login" href="http://127.0.0.1:5000/login">Already have an account? Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
