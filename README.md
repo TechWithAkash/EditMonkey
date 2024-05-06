@@ -1,6 +1,4 @@
-Sure, here's an awesome Readme file for your Flask app "Editmonkey"!
 
-```
 # Editmonkey - Edit Your Images Online
 
 Editmonkey is a web application built with Flask that allows users to edit their images online. With Editmonkey, users can easily upload images, apply various filters and effects, and save the edited images back to their device.
@@ -69,6 +67,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to the Flask community for building such a powerful and flexible web framework.
 - Special thanks to the OpenCV team for providing a comprehensive library for computer vision tasks.
 
-```
-
-Feel free to customize it further to fit your needs!
