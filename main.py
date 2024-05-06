@@ -62,6 +62,14 @@ def login():
 def signup():
     return render_template("signup.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+# @app.route("/how")
+# def how():
+#     return render_template("how.html")
+
 
 @app.route("/edit", methods=["POST"])
 def edit():

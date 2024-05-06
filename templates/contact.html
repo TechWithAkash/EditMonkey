@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Edit Monkey</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    background: #fffcfc;
+    color: #333;
+}
+
+.navbar {
+    background: linear-gradient(to right, #ff6f00, #ffcc80);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* Set the navbar to relative positioning */
+}
+
+.logo {
+    display: flex; /* Display flex to align items horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+.logo img {
+    height: 60px; /* Adjust the height of the logo image */
+    margin-right: 10px; /* Add some space between the logo image and text */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ff6f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffcc80;
+}
+
+#form-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#form-message.error {
+    background-color: #f44336;
+}
+
+#form-message.success {
+    background-color: #4caf50;
+}
+
+        /* body {
+            background: #fffcfc;
+            color: #333;
+        } */
+
+        .navbar {
+            background: linear-gradient(to right, #ff6f00, #ffcc80);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+    background: linear-gradient(to right, #ff6f00, #ffcc80);
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    top: 100px;
+    position: relative;
+}
+
+        .file-upload-wrapper {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 20px;
+        }
+
+        .card.teal {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card.teal:hover {
+            transform: scale(1.05);
+        }
+
+        .card.teal .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card.teal p {
+            font-size: 1rem;
+        }
+
+        .btn.teal {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn.teal:hover {
+            background-color: #ffcc80;
+        }
+        .btn,.card {
+            background-color: #ff6f00;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn:hover,.card:hover {
+            background-color: #ffcc80;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Pacifico', cursive; /* Changed font-family to Pacifico */
+            padding: 0px 50px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .logo {
+            display: flex; /* Display flex to align items horizontally */
+            align-items: center; /* Center align items vertically */
+        }
+
+        .logo img {
+            height: 300px; /* Adjust the height of the logo image */
+            margin-right: 10px; /* Add some space between the logo image and text */
+            margin-top: 10px;
+        }
+
+        .navbar {
+            position: relative; /* Set the navbar to relative positioning */
+        }
+
+        .logo {
+            position: absolute; /* Set the logo to absolute positioning */
+            left: 20px; /* Adjust the left distance as needed */
+            top: 50%; /* Center the logo vertically */
+            transform: translateY(-50%); /* Adjust vertical centering */
+        }
+        /* Custom toast classes */
+    .custom-toast {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+    }
+
+    .custom-toast.rounded {
+        border-radius: 25px; /* Rounded corners */
+    }
+    #download-button {
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem; 
+    text-align: center; 
+    width: 130px;
+    height: 55px;
+}
+
+
+#download-button:hover {
+    background-color: #ffcc80;
+}
+.submitbtn{
+    height: 100px;
+    background-color: #ff6f00;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    display: block;
+
+}
+.submitbtn:hover{
+    background-color: #ffcc80;
+
+}
+
+    
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="/static/images/logo2.png" class="img" alt="Edit Monkey Logo">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/how">How to use</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/login" class="waves-effect waves-light btn">Login</a></li>
+                    <li><a href="/signup" class="waves-effect waves-light btn">Signup</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="form-message" class="hide"></div> <!-- Placeholder for form submission messages -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Edit Monkey</h5>
+                    <p class="grey-text text-lighten-4">Edit your images online with our powerful and user-friendly platform.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/about">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/how">How to use</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container center-align">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-lighten-3">© 2023 Edit Monkey. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting traditionally
+
+        // Get form data
+        const formData = new FormData(this);
+
+        // Send form data via AJAX
+        fetch('process-contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const formMessage = document.getElementById('form-message');
+            if (data.success) {
+                formMessage.innerText = "Message sent successfully!";
+                formMessage.classList.remove('error');
+                formMessage.classList.add('success');
+            } else {
+                formMessage.innerText = "Error sending message. Please try again later.";
+                formMessage.classList.remove('success');
+                formMessage.classList.add('error');
+            }
+            formMessage.style.display = 'block';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+
+    </script> <!-- Include your JavaScript file -->
+</body>
+
+</html>
