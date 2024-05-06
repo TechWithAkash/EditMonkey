@@ -1,5 +1,5 @@
 
-# Editmonkey - Edit Your Images Online
+# 🐵Editmonkey 
 
 Editmonkey is a web application built with Flask that allows users to edit their images online. With Editmonkey, users can easily upload images, apply various filters and effects, and save the edited images back to their device.
 
@@ -7,14 +7,14 @@ Editmonkey is a web application built with Flask that allows users to edit their
 
 - **Upload Images**: Users can upload images from their device to the Editmonkey platform.
 - **Apply Filters**: Editmonkey offers a range of filters and effects that users can apply to their images, including grayscale, sepia, blur, sharpen, and many more.
+- **change Extensions**: You can Simply change the extensions type of the image such as jpeg,jpg,png,webp etc.
 - **Adjustments**: Users can adjust various parameters like brightness, contrast, saturation, and more to customize their images.
-- **Crop and Resize**: Editmonkey enables users to crop and resize their images to fit their preferences.
 - **Save and Download**: Once users are satisfied with their edits, they can save the edited images back to their device.
 
 ## Technologies Used
 
 - **Flask**: Flask is a lightweight WSGI web application framework in Python.
-- **OpenCV**: OpenCV is a library of programming functions mainly aimed at real-time computer vision.
+- **OpenCV**: OpenCV is a library of programming functions mainly aimed at real-time computer vision and helps to edit and image.
 - **HTML/CSS/JavaScript**: For building the user interface and handling client-side interactions.
 - **Bootstrap**: Bootstrap is a front-end framework for developing responsive and mobile-first websites.
 
@@ -23,7 +23,7 @@ Editmonkey is a web application built with Flask that allows users to edit their
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/editmonkey.git
+git clone https://github.com/TechWithAkash/editmonkey.git
 ```
 
 2. Install the required dependencies:
