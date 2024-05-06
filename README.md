@@ -23,7 +23,7 @@ Editmonkey is a web application built with Flask that allows users to edit their
 1. Clone the repository:
 
 ```
-git clone https://github.com/TechWithAkash/editmonkey.git
+git clone https://github.com/TechWithAkash/EditMonkey.git
 ```
 
 2. Install the required dependencies:
