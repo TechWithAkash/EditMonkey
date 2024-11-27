@@ -5,7 +5,7 @@ Editmonkey is a web application built with Flask that allows users to edit their
 
 # Demo Video
 
-# [![Demo Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://github.com/user-attachments/assets/3feb7c94-de29-446f-8769-d0b9423a856e)
+[![Demo Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://github.com/user-attachments/assets/3feb7c94-de29-446f-8769-d0b9423a856e)
 
 ## Features
 
