@@ -3,6 +3,10 @@
 
 Editmonkey is a web application built with Flask that allows users to edit their images online. With Editmonkey, users can easily upload images, apply various filters and effects, and save the edited images back to their device.
 
+# Demo Video
+
+# [![Demo Video](https://img.youtube.com/vi/placeholder/0.jpg)](https://github.com/user-attachments/assets/3feb7c94-de29-446f-8769-d0b9423a856e)
+
 ## Features
 
 - **Upload Images**: Users can upload images from their device to the Editmonkey platform.
