@@ -1,3 +1,7 @@
+# Flask
+# opencv-python
+# Werkzeug==2.2.2
+
 Flask
-opencv-python
+opencv-python-headless
 Werkzeug==2.2.2
