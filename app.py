@@ -88,5 +88,3 @@ def edit():
             return jsonify({'success': True, 'converted_url': converted_url})
     return jsonify({'error': 'Invalid request'})
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5000)
